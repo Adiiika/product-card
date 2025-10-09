@@ -8,12 +8,11 @@
     color: #515076;
     font-weight: 400;
 }
-
-
- .product-selection {
+.product-selection {
    display: flex;
    justify-content: center;
    position: relative;
+   z-index: 2;
    margin-top: 220px;
    font-size: 70px;
    line-height: 78px;
@@ -22,11 +21,11 @@
 .background-for-cards {
    width: 790px;
    height: 697px;
-   margin-top: -420px;
+   margin-top: -410px;
    margin-left: 720px;
    position: absolute;
 }
- .product-cards-container {
+.product-cards-container {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
@@ -36,50 +35,50 @@
    gap: 45px;
    row-gap: 45px;  
 }
- .card-container {
+.card-container {
     padding: 25px;
     height: 550px;
     width: 344px;
     background-color: #F7F7FA;
     box-shadow: 2px 2px 10px 0px #5150761A;
-   }
- .product-category {
+}
+.product-category {
     margin-top: 20px;
     margin-bottom: 8px;
     color: #A5A3B9;
     text-transform: uppercase;
     display: block;
- }
- .product-name {
+}
+.product-name {
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
     margin-bottom: 4px;
- }
- .product-description {
+}
+.product-description {
     margin-bottom: 15px;
     width: 280px;
- }
- .product-compound {
+}
+.product-compound {
     margin-top: 5px;
     margin-left: 13px;
     list-style-type: circle;
     margin-bottom: 14px;
- }
- .product-list-item {
+}
+.product-list-item {
    margin-top: 4px;
- }
- .product-price-container {
+}
+.product-price-container {
    display: flex;
    justify-content: space-between;
    width: 290px;
- }
- .product-price-label {
+}
+.product-price-label {
    font-weight: 700;
    font-size: 20px;
    line-height: 24px;
- }
- .product-price {
+}
+.product-price {
    font-size: 20px;
    line-height: 24px; 
- }
+}
