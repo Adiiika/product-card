@@ -1,18 +1,18 @@
 // Изменение цвета первой карточки
 const productCard = document.querySelector('.card-container');
-const changeColorFirstCard = document.querySelector('#change-color-first-card');
+const changeColorFirstCardButton = document.querySelector('#change-color-first-card');
 const yellowColor = 'rgba(243, 243, 28, 1)'
 
-changeColorFirstCard.addEventListener('click', () => {
+changeColorFirstCardButton.addEventListener('click', () => {
     productCard.style.backgroundColor = yellowColor
 })
 
 // Изменение цвета всех карточек
 const productCards = document.querySelectorAll('.card-container');
-const changeColorAllCards = document.querySelector('#change-color-all-cards');
+const changeColorAllCardsButton = document.querySelector('#change-color-all-cards');
 const pinkColor = 'rgba(196, 7, 127, 1)';
 
-changeColorAllCards.addEventListener('click', () => {
+changeColorAllCardsButton.addEventListener('click', () => {
     productCards.forEach((card) => card.style.backgroundColor = pinkColor
     
 )})
@@ -31,13 +31,13 @@ function openWebsite() {
 }
 
 // Выведение console.log при наведении курсора на "Выбери свой продукт"
-const productSelection = document.querySelector('.product-selection');
+const mainTitle = document.querySelector('.main-title');
 
-productSelection.addEventListener('mouseover', () => {
-   console.log('Ура, молодец!')
+mainTitle.addEventListener('mouseover', () => {
+   console.log('Выбери свой продукт')
 })
 
 // Изменение цвета кнопки
 const changeColorButton = document.querySelector('#change-color-button');
 
-changeColorButton.addEventListener('click', () => changeColorButton.classList.toggle("blue-color"));
+changeColorButton.addEventListener('click', () => changeColorButton.classList.toggle("bg-blue"));
