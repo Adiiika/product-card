@@ -32,9 +32,10 @@ function openWebsite() {
 
 // Выведение console.log при наведении курсора на "Выбери свой продукт"
 const mainTitle = document.querySelector('.main-title');
+const headerContent = mainTitle.textContent;
 
 mainTitle.addEventListener('mouseover', () => {
-   console.log('Выбери свой продукт')
+   console.log(`${headerContent}`);
 })
 
 // Изменение цвета кнопки
