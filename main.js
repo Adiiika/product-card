@@ -35,7 +35,7 @@ const mainTitle = document.querySelector('.main-title');
 const headerContent = mainTitle.textContent;
 
 mainTitle.addEventListener('mouseover', () => {
-   console.log(`${headerContent}`);
+   console.log(headerContent);
 })
 
 // Изменение цвета кнопки
