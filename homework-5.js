@@ -7,47 +7,47 @@ reportTemperatureCity('Нью йорке', 33);
 reportTemperatureCity('Норильске', -20);
 
 //Задание 4.Функция, которая сравнивает скорость звука с переданной скоростью
-const speedSound = 1235;
-function compare(speed) {
-    if (speedSound < speed) {
+const SPEED_SOUND = 1235;
+function soundComparison(speed) {
+    if (SPEED_SOUND < speed) {
         console.log("Сверхзвуковая скорость")
-} else if(speedSound > speed) {
-    console.log("Дозвуковая скорость")
-}}
-compare(298);
-compare(1930);
-compare(1200);
+} else {
+        console.log("Дозвуковая скорость")
+    }}
+soundComparison(298);
+soundComparison(1930);
+soundComparison(1200);
 
 //Задание 5. Функция, которая проверяет бюджет на покупку товара
 const computer = "MacBook";
 const priceComputer = 60000;
 
-function buy(budget) {
+function buyComputer(budget) {
     if (budget > priceComputer) {
         console.log(`${computer} приобретён. Спасибо за покупку!`)
     } else if (budget < priceComputer) {
         console.log(`Вам не хватает ${budget}, пополните баланс`)
     }
 } 
-buy(65000);
-buy(30000);
+buyComputer(65000);
+buyComputer(30000);
 
 //Задание 6-7. Функция, которая сравнивает скорость машин
 
-const speedFirstCar = 250;
+const firstCarSpeed = 250;
 const firstCar = "Mersedes"
 const secondCar = "BMW"
 
-function check(speed) {
-    if(speedFirstCar > speed) {
+function checkSpeedCars(speed) {
+    if(firstCarSpeed > speed) {
         console.log(`${firstCar} быстрее, чем ${secondCar}`)
-    } else if(speedFirstCar < speed) {
+    } else if(firstCarSpeed < speed) {
         console.log(`${secondCar} быстрее, чем ${firstCar}`)
     } else {
         console.log(`Обе машины хороши и быстры`)
     }
 }
 
-check(300);
-check(250);
-check(100);
+checkSpeedCars(300);
+checkSpeedCars(250);
+checkSpeedCars(100);
