@@ -8,15 +8,15 @@ reportTemperatureCity('Норильске', -20);
 
 //Задание 4.Функция, которая сравнивает скорость звука с переданной скоростью
 const SPEED_SOUND = 1235;
-function compareSound(speed) {
+function compareSpeed(speed) {
     if (SPEED_SOUND < speed) {
         console.log("Сверхзвуковая скорость")
 } else {
         console.log("Дозвуковая скорость")
     }}
-compareSound(298);
-compareSound(1930);
-compareSound(1200);
+compareSpeed(298);
+compareSpeed(1930);
+compareSpeed(1200);
 
 //Задание 5. Функция, которая проверяет бюджет на покупку товара
 const computer = "MacBook";
