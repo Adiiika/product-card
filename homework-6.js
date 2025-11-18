@@ -1,11 +1,11 @@
 // задание 3. Информация обо мне
 const infoAboutMe = {
-name: 'Adam',
-age: 18,
-work: 'Бариста',
-relationship: 'Не женат',
-country: 'Россия',
-city: 'Махачкала'
+    name: 'Adam',
+    age: 18,
+    work: 'Бариста',
+    relationship: 'Не женат',
+    country: 'Россия',
+    city: 'Махачкала'
 }
 console.log(infoAboutMe);
 
@@ -18,16 +18,16 @@ const infoAboutCar ={
     typeOfGearbox: 'Механическая',  
 }
 
-infoAboutCar.owner = infoAboutMe.name;
+infoAboutCar.owner = infoAboutMe;
 console.log(infoAboutCar);
 
 // задание 5. Функция проверяющая объект 'Максимальная скорость'
-function checkObject() {
+function ensureObjectProperty() {
     if(!infoAboutCar.maxSpeed) {
        infoAboutCar.maxSpeed = 250;
     }
 }
-checkObject();
+ensureObjectProperty();
 
 // задание 6. Функция объект и свойство объекта
 const jobDeveloper = {
@@ -35,12 +35,13 @@ const jobDeveloper = {
     experince: '1 год',
     stack: 'HTML, CSS, JavaScript'
 }
-
-function getArgument(argument, propertyArgument)
- {
-  console.log(Object.keys(argument), Object.values(propertyArgument));  
+function showProperty(object, property)
+{
+  console.log(object[property]);  
 }
-getArgument(jobDeveloper, jobDeveloper);
+showProperty(jobDeveloper, "profession");
+showProperty(jobDeveloper, "experince");
+showProperty(jobDeveloper, "stack")
 
 // задание 7. Массив с содержанием продуктов
 const products = [
@@ -51,7 +52,7 @@ const products = [
 console.log(products);
 
 // задание 8. Массив, в котором содержится информация о некоторых книгах
-const infoAboutBooks = [
+const infoAboutMyLibrary = [
     {
         name: 'И дольше века длится день',
         author: 'Чингиз Айматов',
@@ -73,7 +74,7 @@ const infoAboutBooks = [
       genre: 'Детектив',
       color: 'Черный'  
     }]
-infoAboutBooks.push([
+infoAboutMyLibrary.push([
     {
         name: 'Палата №6',
         author: 'Анатолий Чехов',
@@ -81,36 +82,41 @@ infoAboutBooks.push([
         genre: 'Классика',
         color: 'Коричневый'
     }])
-console.log(infoAboutBooks);
+console.log(infoAboutMyLibrary);
 
-const infoAboutFilms = [
+const myAdditionalLibrary = [
     {
         name: 'Зелёная миля',
-        author: 'Фрэнк Дарабонт',
-        yearOfPublication: 1999,
-        country: 'США'
+        author: 'Стивен Кинг',
+        yearOfPublication: 1996,
+        genre: 'Психологическая драма',
+        color: 'Светла-коричневая'
     },
     {
-        name: 'Малыш на драйве',
-        author: 'Стивен Прайс',
-        yearOfPublication: 2017,
-        country: 'Великобритания, США'
+        name: 'Исповедь',
+        author: 'Лев Толстой',
+        yearOfPublication: 1880,
+        genre: 'Исповедь-Проповедь',
+        color: 'Синий'
     },
     {
-        name: 'Джиперс Криперс',
-        author: 'Виктор Сальва',
-        yearOfPublication: 2001,
-        country: 'Германия, США'
+        name: 'Гарри Поттер и Философский камень',
+        author: 'Роулинг Джоан Кэтлин',
+        yearOfPublication: 1997,
+        genre: 'Приключения',
+        color: 'Красная'
     }
     
 ]
-const infoAboutBooksFilms = infoAboutBooks.concat(infoAboutFilms);
-console.log(infoAboutBooksFilms);
+const myEntireLibrary = infoAboutMyLibrary.concat(myAdditionalLibrary);
+console.log(myEntireLibrary);
 
-// задание 10. Функция, которая проверяет , редкая ли книга/фильм или нет
+//  задание 10. Функция, которая проверяет , редкая ли книга или нет
 function isRareBook(books) {
-    books.forEach(book => {
-        book.isRareBook = book.yearOfPublication > 2000;  
-});}   
-isRareBook(infoAboutBooksFilms);
-console.log(infoAboutBooksFilms);
+ books.map(book => {
+ book.isRareBook = book.yearOfPublication > 2000;  
+ });}   
+
+ isRareBook(myEntireLibrary);
+console.log(myEntireLibrary);
+
