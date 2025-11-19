@@ -22,12 +22,12 @@ infoAboutCar.owner = infoAboutMe;
 console.log(infoAboutCar);
 
 // задание 5. Функция проверяющая объект 'Максимальная скорость'
-function ensureObjectProperty() {
-    if(!infoAboutCar.maxSpeed) {
+function checkMaxSpeed() {
+    if (!infoAboutCar.maxSpeed) {
        infoAboutCar.maxSpeed = 250;
     }
 }
-ensureObjectProperty();
+checkMaxSpeed();
 
 // задание 6. Функция объект и свойство объекта
 const jobDeveloper = {
@@ -73,7 +73,8 @@ const infoAboutMyLibrary = [
       yearOfPublication: 1998,
       genre: 'Детектив',
       color: 'Черный'  
-    }]
+    }
+]
 infoAboutMyLibrary.push([
     {
         name: 'Палата №6',
@@ -106,17 +107,15 @@ const myAdditionalLibrary = [
         genre: 'Приключения',
         color: 'Красная'
     }
-    
 ]
 const myEntireLibrary = infoAboutMyLibrary.concat(myAdditionalLibrary);
 console.log(myEntireLibrary);
 
 //  задание 10. Функция, которая проверяет , редкая ли книга или нет
 function isRareBook(books) {
- books.map(book => {
- book.isRareBook = book.yearOfPublication > 2000;  
- });}   
-
- isRareBook(myEntireLibrary);
+books.map(book => {
+book.isRareBook = book.yearOfPublication > 2000;  
+});}   
+isRareBook(myEntireLibrary);
 console.log(myEntireLibrary);
 
