@@ -35,9 +35,8 @@ const jobDeveloper = {
     experince: '1 год',
     stack: 'HTML, CSS, JavaScript'
 }
-function showProperty(object, property)
-{
-  console.log(object[property]);  
+function showProperty(object, property) {
+    console.log(object[property]);  
 }
 showProperty(jobDeveloper, "profession");
 showProperty(jobDeveloper, "experince");
@@ -113,9 +112,7 @@ console.log(myEntireLibrary);
 
 //  задание 10. Функция, которая проверяет , редкая ли книга или нет
 function isRareBook(books) {
-books.map(book => {
-book.isRareBook = book.yearOfPublication > 2000;  
-});}   
+books.map(book => {book.isRareBook = book.yearOfPublication > 2000;});}   
 isRareBook(myEntireLibrary);
 console.log(myEntireLibrary);
 
