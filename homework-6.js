@@ -113,7 +113,8 @@ console.log(myEntireLibrary);
 //  задание 10. Функция, которая проверяет , редкая ли книга или нет
 function isRareBook(books) {
     books.map(book => 
-        book.isRareBook = book.yearOfPublication > 2000);}   
+        book.isRareBook = book.yearOfPublication > 2000);
+    }   
 isRareBook(myEntireLibrary);
 console.log(myEntireLibrary);
 
