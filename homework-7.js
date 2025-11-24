@@ -7,20 +7,16 @@ const newArray = numbers.filter(number => number > 4);
 console.log(newArray)
 
 // Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы, мебель и т.д.), проверить, есть ли в массиве какая-то определенная сущность.
-const differentAnimals = ['Слон, Лев, Акула, Кошка']
-const certainAnimal = {
-    animal: "Крокодил"
-}
-const checkEntity = console.log(
-    Object.values(differentAnimals).includes
-    ('Крокодил') ? "Данная сущность присувствует" : "Данной сущность отсувствует")
+const differentAnimals = ["Слон", "Лев", "Акула", "Кошка"]
+
+console.log(differentAnimals.find(animal => animal === "Крокодил"))
 
 //  Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть.
-function flipArrays(arrays) {
-    return console.log(arrays.reverse())
+function getFlippedArray(array) {
+    return console.log(array.reverse())
 }
-flipArrays(numbers);
-flipArrays(differentAnimals);
+getFlippedArray(numbers);
+getFlippedArray(differentAnimals);
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 const filterCertainComment = userComments.filter(comment =>
