@@ -12,11 +12,11 @@ const differentAnimals = ["Слон", "Лев", "Акула", "Кошка"]
 console.log(differentAnimals.find(animal => animal === "Крокодил"))
 
 //  Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть.
-function getFlippedArray(array) {
+function outputFlippedArray(array) {
     return console.log(array.reverse())
 }
-getFlippedArray(numbers);
-getFlippedArray(differentAnimals);
+outputFlippedArray(numbers);
+outputFlippedArray(differentAnimals);
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 const filterCertainComment = userComments.filter(comment =>
