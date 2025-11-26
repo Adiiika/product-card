@@ -13,7 +13,7 @@ console.log(differentAnimals.find(animal => animal === "Крокодил"))
 
 //  Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать") . Два вышеуказанных массива с помощью этой функции перевернуть.
 function outputFlippedArray(array) {
-    return console.log(array.reverse())
+     console.log(array.reverse())
 }
 outputFlippedArray(numbers);
 outputFlippedArray(differentAnimals);
