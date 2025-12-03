@@ -10,8 +10,8 @@ function outputProductCards(productCards) {
     productCardsClone.querySelector('.product-category').textContent = product.category
     productCardsClone.querySelector('.product-name').textContent = product.name
     productCardsClone.querySelector('.product-description').textContent = product.description
-    productCardsClone.querySelector('.product-list-compound').innerHTML = product.listItem.map(compound => `<li>${compound}</li>`).join('')
-    productCardsClone.querySelector('.product-price').textContent = product.price
+    productCardsClone.querySelector('.product-list-compound').innerHTML = product.listIngredients.map(compound => `<li>${compound}</li>`).join('')
+    productCardsClone.querySelector('.product-price').textContent = product.price + ' \u20BD'
     productCardsList.appendChild(productCardsClone)
 })
 }
