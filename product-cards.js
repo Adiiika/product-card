@@ -3,7 +3,7 @@ export const productCards = [{
     category: "для нормальной кожи",
     name: "Увлажняющий мусс",
     description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой",
-    listIngredients: [
+    ingredientsList: [
         "активные натуральные комплексы",
         "витамины С, А, РР, В И Е",
         "солнцезащитные компоненты",
@@ -15,7 +15,7 @@ export const productCards = [{
     category: "для нормальной кожи",
     name: "Увлажняющая маска",
     description: "Способствует удерживанию влаги в верхних слоях кожи",
-    listIngredients: [
+    ingredientsList: [
         "воски",
         "минералы",
         "масла"
@@ -27,7 +27,7 @@ export const productCards = [{
     category: "для нормальной кожи",
     name: "Гель для умывания",
     description: "Интенсивно очищает, не повреждает защитный барьер кожи",
-    listIngredients: [
+    ingredientsList: [
         "минералы",
         "витамины С, А, РР, В И Е",
         "солнцезащитные компоненты"
@@ -39,7 +39,7 @@ export const productCards = [{
     category: "для нормальной кожи",
     name: "Подарочный набор №1",
     description: "Набор, состоящий из увлажняющего крема и маски",
-    listIngredients: [
+    ingredientsList: [
        "воски",
        "минералы",
        "масла"
@@ -51,7 +51,7 @@ export const productCards = [{
     category: "для нормальной кожи",
     name: "Подарочный набор №5",
     description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания",
-    listIngredients: [
+    ingredientsList: [
         "воски",
         "минералы",
         "масла"
