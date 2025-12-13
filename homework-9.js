@@ -17,6 +17,7 @@ emailForm.addEventListener('submit', (event) => {
 // Если регистрация успешна - также выводим объект с свойствами и их значениями, как в задании №4. 
 // Дополнительно мы должны добавить к этому объекту свойство createdOn и указать туда время создания (используем сущность new Date())
 const signForm = document.querySelector('.signup-form');
+const formLogin = document.querySelector('.register.login')
 const formPassword = document.querySelector('.register.password')
 const formConfirmPassword = document.querySelector('.register.password-confirmation')
 let data = null;
@@ -63,20 +64,14 @@ const modalSigninButton = document.querySelector('.modal-signin-button');
 const modalRegisterLogin = document.querySelector('.modal-register.login').value;
 const modalRegisterPassword = document.querySelector('.modal-register.password').value;
 
-const user = {
-    login: "123",
-    password: "123"
-}
 modalForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const modalRegisterLogin = document.querySelector('.modal-register.login').value;
-    const modalRegisterPassword = document.querySelector('.modal-register.password').value;
+    const modalRegisterLogin = document.querySelector('.modal-register.login');
+    const modalRegisterPassword = document.querySelector('.modal-register.password');
     const form = event.target;
     const formData = new FormData(form);
     let data = Object.fromEntries(formData.entries());
-    const dataLogin = data.modalRegisterLogin;
-    const dataPassword = data.modalRegisterPassword;
-    if (user.login === modalRegisterLogin && user.password === modalRegisterPassword) {
+    if (formLogin.value === modalRegisterLogin.value && formPassword.value === modalRegisterPassword.value) {
         modalBox.classList.remove('modal-overlay--open')
         openModal.classList.remove('modal-content--open')
         alert('Вы зарегистрировались')
@@ -87,10 +82,3 @@ modalForm.addEventListener('submit', (event) => {
         alert('Некорректный логин или пароль')
     }
  })
-
- 
- 
- 
-// data.lastLogin = new Date();
-//         const currentUser = data;
-//         console.log(currentUser)

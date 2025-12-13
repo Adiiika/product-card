@@ -105,14 +105,16 @@
     line-height: 154%;
     color: #FFFFFF;
     position: absolute;
-    margin: 85px 1430px 349px 84px;
+    margin-top: 85px;
+    margin-left: 84px;
 }
 .product-description-cards {
     font-weight: 400;
     font-size: 18px;
     color: #FFFFFF;
     position: absolute;
-    margin: 144px 1235px 305px 84px;
+    margin-top: 144px;
+    margin-left: 84px;
     height: 28px;
     width: 409px;
 }
@@ -120,13 +122,15 @@
     height: 17px;
     width: 21px;
     position: absolute;
-    margin: 214px 1623px 245px 84px;
+    margin-top: 214px;
+    margin-left: 84px;
 }
 .vk-icon {
     height: 14px;
     width: 24px;
     position: absolute;
-    margin: 214px 1568px 247px 135px;
+    margin-top: 214px;
+    margin-left: 135px;
 }
 .product-nav-links {
     width: 178px;
@@ -134,7 +138,8 @@
     font-size: 20px;
     color: #FFFFFF;
     position: absolute;
-    margin: 85px 75px 368px 1475px;
+    margin-top: 85px;
+    margin-left: 1475px;
     text-decoration: none;
 }
 .product-nav {
@@ -145,13 +150,16 @@
     text-decoration: none;
 }
 .product-nav.main {
-    margin: 132px 179px 323px 1475px;
+    margin-top: 132px; 
+    margin-left: 1475px;
 }
 .product-nav.shop {
-    margin: 171px 172px 284px 1475px;
+    margin-top: 171px;
+    margin-left: 1475px;
 }
 .product-nav.contacts {
-    margin: 210px 165px 245px 1475px;
+    margin-top: 210px;
+    margin-left: 1475px;
 }
 .product-subscribe-promotions {
     width: 350px;
@@ -159,15 +167,17 @@
     font-size: 24px;
     color: #FFFFFF;
     position: absolute;
-    margin: 85px 665px 363px 713px;
+    margin-top: 85px;
+    margin-left: 713px;
 }
 .product-input {
     position: absolute;
-    margin: 127px 590px 289px 650px;
+    margin-top: 127px;
+    margin-left: 650px;
     height: 61px;
     width: 477px;
     border-radius: 10px;
-    border: none
+    border: none;
 }
 .product-input::placeholder {
  font-weight: 500;
@@ -184,7 +194,8 @@
     border: 1px;
     background-color: #000000;
     position: absolute;
-    margin: 149px 786px 310px 942px;
+    margin-top: 149px;
+    margin-left: 942px;
 }
 .product-subscribe-button {
     height: 18px;
@@ -192,7 +203,8 @@
     font-size: 18px;
     color: #000000;
     position: absolute;
-    margin: 147px 641px 308px 975px;
+    margin-top: 147px; 
+    margin-left: 975px;
     background: white;
     border: none;
     cursor: pointer;
@@ -202,7 +214,8 @@
     font-size: 18px;
     color: #FFFFFF;
     position: absolute;
-    margin: 427px 676px 28px 676px;
+    margin-top: 427px;
+    margin-left: 676px;
     width: 376px;
 }
 .product-white-line {
@@ -212,7 +225,8 @@
     border: 1px;
     background-color: #FFFFFF;
     position: absolute;
-    margin: 394px 832px 83px 830px
+    margin-top: 394px;
+    margin-left: 830px;
 }
 .signup-form-container {
     display: flex;
