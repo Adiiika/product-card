@@ -8,6 +8,7 @@
     color: #515076;
     font-weight: 400;
 }
+
 .main-title {
    display: flex;
    justify-content: center;
@@ -18,6 +19,7 @@
    line-height: 78px;
    margin-bottom: 110px;
 }
+
 .background-for-cards {
    width: 790px;
    height: 697px;
@@ -25,6 +27,7 @@
    margin-left: 320px;
    position: absolute;
 }
+
 #product-cards-list {
    display: flex;
    justify-content: center;
@@ -35,6 +38,7 @@
    gap: 45px;
    row-gap: 45px;  
 }
+
 .card-container {
     padding: 25px;
     height: 540px;
@@ -43,6 +47,7 @@
     background-color: #F7F7FA;
     box-shadow: 2px 2px 10px 0px #5150761A;
 }
+
 .product-category {
     margin-top: 20px;
     margin-bottom: 8px;
@@ -50,39 +55,47 @@
     text-transform: uppercase;
     display: block;
 }
+
 .product-name {
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
     margin-bottom: 4px;
 }
+
 .product-description {
     margin-bottom: 15px;
     width: 280px;
 }
+
 .product-list-compound {
     margin-top: 5px;
     margin-left: 17px;
     list-style-type: circle; 
     margin-bottom: 14px;
 }
+
 .product-list-item {
    margin-top: 10px;
 }
+
 .product-price-container {
    display: flex;
    justify-content: space-between;
    width: 290px;
 }
+
 .product-price-label {
    font-weight: 700;
    font-size: 20px;
    line-height: 24px;
 }
+
 .product-price {
    font-size: 20px;
    line-height: 24px; 
 }
+
 .button {
    font-size: 20px;
    height: 50px;
@@ -90,14 +103,17 @@
    margin-left: 70px;
    color: rgb(128, 53, 0);
 }
+
 .bg-blue {
    background-color: aquamarine;
 }
+
 .footer-product-cards {
     background-color: #3A3A3A;
     height: 477px;
     margin-top: 100px;
 }
+
 .product-card-header {
     font-weight: 800;
     width: 214px;
@@ -108,6 +124,7 @@
     margin-top: 85px;
     margin-left: 84px;
 }
+
 .product-description-cards {
     font-weight: 400;
     font-size: 18px;
@@ -118,6 +135,7 @@
     height: 28px;
     width: 409px;
 }
+
 .telegram-icon {
     height: 17px;
     width: 21px;
@@ -125,6 +143,7 @@
     margin-top: 214px;
     margin-left: 84px;
 }
+
 .vk-icon {
     height: 14px;
     width: 24px;
@@ -132,6 +151,7 @@
     margin-top: 214px;
     margin-left: 135px;
 }
+
 .product-nav-links {
     width: 178px;
     font-weight: 500;
@@ -142,6 +162,7 @@
     margin-left: 1475px;
     text-decoration: none;
 }
+
 .product-nav {
     font-weight: 400;
     font-size: 18px;
@@ -149,18 +170,22 @@
     position: absolute;
     text-decoration: none;
 }
+
 .product-nav.main {
     margin-top: 132px; 
     margin-left: 1475px;
 }
+
 .product-nav.shop {
     margin-top: 171px;
     margin-left: 1475px;
 }
+
 .product-nav.contacts {
     margin-top: 210px;
     margin-left: 1475px;
 }
+
 .product-subscribe-promotions {
     width: 350px;
     font-weight: 400;
@@ -170,6 +195,7 @@
     margin-top: 85px;
     margin-left: 713px;
 }
+
 .product-input {
     position: absolute;
     margin-top: 127px;
@@ -179,15 +205,18 @@
     border-radius: 10px;
     border: none;
 }
+
 .product-input::placeholder {
  font-weight: 500;
  font-size: 17px;
  color: #000000BF;
  padding-left: 36px;
 }
+
 .product-input:focus {
     font-size: 24px;
 }
+
 .product-black-line {
     height: 18px;
     width: 1px;
@@ -197,6 +226,7 @@
     margin-top: 149px;
     margin-left: 942px;
 }
+
 .product-subscribe-button {
     height: 18px;
     font-weight: 500;
@@ -209,6 +239,7 @@
     border: none;
     cursor: pointer;
 }
+
 .product-email-copyright {
     font-weight: 400;
     font-size: 18px;
@@ -218,6 +249,7 @@
     margin-left: 676px;
     width: 376px;
 }
+
 .product-white-line {
     content: "";
     width: 66px;
@@ -228,13 +260,14 @@
     margin-top: 394px;
     margin-left: 830px;
 }
+
 .signup-form-container {
     display: flex;
     justify-content: center;
     width: 1700px;
     height: 650px;
-
 }
+
 .signup-form {
     display: flex;
     height: 650px;
@@ -244,8 +277,8 @@
     border-radius: 7px;
     padding-left: 20px;
     padding-top: 15px;    
-
 }
+
 .register {
  display: block;
  font-size: 17px;
@@ -257,15 +290,18 @@
  border: none;
  border-radius: 4px;
 }
+
 .register::placeholder {
     color:#000000;
     padding-left: 80px;
 }
+
  label {
     font-size: 16px;
     color: black;
     font-weight: 500;
 }
+
 .register-button {
     height: 60px;
     width: 360px;
@@ -279,6 +315,7 @@
     margin-bottom: 10px;
     cursor: pointer;
 }
+
 .authentication-button {
  font-size: 18px;
  font-weight: 600;
@@ -290,6 +327,7 @@
  border-radius: 4px;
  cursor: pointer;
 }
+
  .modal-overlay {
     display: none;
     position: fixed;
@@ -302,9 +340,11 @@
     box-shadow: 0 2px 10px rgba(0, 0);
     z-index: 1000;
 }
+
 .modal-overlay--open {
     display: block;
 }
+
 .modal-content {
     display: none;
     width: 350px;
@@ -318,15 +358,18 @@
     z-index: 1001;
     background-image: url('/images/bg-cartoon.jpg') 
 }
+
 .modal-content--open {
     display: block;
     
 }
+
 .close-modal-button {
     cursor: pointer;
     height: 20px;
     width: 20px;
 }
+
 .modal-register {
   height: 40px;
   width: 300px;
@@ -335,9 +378,11 @@
   margin-bottom: 40px;
 
 }
+
 .modal-register.login {
  margin-top: 50px;
 }
+
 .modal-register::placeholder {
     font-size: 20px;
     padding-left: 35px;
@@ -353,5 +398,4 @@
    color: black;
    font-size: 20px;
    cursor: pointer;
-
 }
