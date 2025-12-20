@@ -37,8 +37,8 @@ const displayCards = () => {
     const numbers = Number(question)
     if(numbers > 0 && numbers <= productCards.length) {
     outputProductCards(productCards.slice(0, numbers))
-
-} else {
+    } else {
     alert("Нужно вводить число от 1 до 5")
-}}
+    }}
+
 displayCards();
