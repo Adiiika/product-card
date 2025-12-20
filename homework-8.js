@@ -6,6 +6,7 @@ const productCardsList = document.getElementById('product-cards-list')
 function outputProductCards(productCards) { 
     productCards.forEach(product => {
     const productCardsClone = productCardsTemplate.content.cloneNode(true);
+    productCardsClone.querySelector('.product-image').src = `/images/${product.img}.png`
     productCardsClone.querySelector('.product-image').src = `src/images/${product.img}.png`
     productCardsClone.querySelector('.product-category').textContent = product.category
     productCardsClone.querySelector('.product-name').textContent = product.name
@@ -37,9 +38,8 @@ const displayCards = () => {
     const numbers = Number(question)
     if(numbers > 0 && numbers <= productCards.length) {
     outputProductCards(productCards.slice(0, numbers))
-
-} else {
+    } else {
     alert("Нужно вводить число от 1 до 5")
-}}
-displayCards();
+    }}
 
+displayCards();

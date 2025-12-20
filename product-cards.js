@@ -1,4 +1,6 @@
-export const productCards = [{
+
+ export const productCards = [
+    {
     img: "moist-mousse",
     category: "для нормальной кожи",
     name: "Увлажняющий мусс",
@@ -9,8 +11,8 @@ export const productCards = [{
         "солнцезащитные компоненты",
     ],
     price: '2 750'
-},
-{
+    },
+    {
     img: "moist-mask",
     category: "для нормальной кожи",
     name: "Увлажняющая маска",
@@ -21,8 +23,8 @@ export const productCards = [{
         "масла"
     ],
     price: '3 500'
-},
-{
+    },
+    {
     img: "gel-for-face",
     category: "для нормальной кожи",
     name: "Гель для умывания",
@@ -33,8 +35,8 @@ export const productCards = [{
         "солнцезащитные компоненты"
     ],
     price: '1 650'
-},
-{
+    },
+    {
     img: "skin-products-one",
     category: "для нормальной кожи",
     name: "Подарочный набор №1",
@@ -45,8 +47,8 @@ export const productCards = [{
        "масла"
     ],
     price: '4 750'
-},
-{
+    },
+    {
     img: "skin-products-five",
     category: "для нормальной кожи",
     name: "Подарочный набор №5",
@@ -57,5 +59,5 @@ export const productCards = [{
         "масла"
     ],
     price: '7 520' 
-}
+    }
 ]
