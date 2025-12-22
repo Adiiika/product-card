@@ -1,83 +1,71 @@
-// 1.К Форме, которая прикреплена в футере - добавить логику:  
-// email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется.
-//  Кнопка "Подписаться" и есть "отправкой формы",
-//  при нажатии на которую мы будем выводить консоль лог в виде объекта:  { email: 'введенная почта' }
-const inputEmail = document.querySelector('.product-input');
-const emailForm = document.querySelector('.product-email-form');
+import Modal from './modal.js'
+import Form from './form.js'
 
-emailForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    console.log(inputEmail.value)
+const signUpForm = new Form('signup-form-id');
+const emailForm = new Form('email-form-id');
+
+// Задание 1- Сделать валидацию email в форме подписки
+document 
+.getElementById('email-form-id')
+.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    if(!emailForm.isValid()) {
+        console.log('Неверный email')
+        return;
+    } 
+    const value = emailForm.getFormData();
+    console.log(value)
+    emailForm.resetForm();
 })
 
-// 2.Создать форму для регистрации. Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
-// Используйте <label> для того, что бы указать пользователю, какое поле за что отвечает. 
-// Также важно использовать placeholder (обо всем этом можно будет почитать в документации в конце поста) Разрешается добавить поля на ваше усмотрение.
-// Все поля должны иметь валидацию. Если пользователь ввел два разных пароля - мы должны предупредить его о том, что регистрация отклонена. 
-// Если регистрация успешна - также выводим объект с свойствами и их значениями, как в задании №4. 
-// Дополнительно мы должны добавить к этому объекту свойство createdOn и указать туда время создания (используем сущность new Date())
-const signForm = document.querySelector('.signup-form');
-const formLogin = document.querySelector('.register.login')
-const formPassword = document.querySelector('.register.password')
-const formConfirmPassword = document.querySelector('.register.password-confirmation')
-let data = null;
+// Задание 2 - Создание формы регистрации
+let valueSignUp = null;
 
-signForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formName = event.target;
-    const formData = new FormData(formName);
-    data = Object.fromEntries(formData.entries());
-    data.createdOn = new Date();
-    if (formPassword.value == formConfirmPassword.value) {
-    alert('Регистрация успешна!')
-    console.log((data));
-} else {
-    alert('Некорректный пароль')
-    console.log((data));
+document
+.getElementById('signup-form-id')
+.addEventListener('submit', (event) => {
+    event.preventDefault()
+    valueSignUp = signUpForm.getFormData()
+    valueSignUp.createdOn = new Date()
+    const isPasswordValid = valueSignUp.password == valueSignUp.confirmPassword 
+    alert(isPasswordValid ? 'Регистрация успешна' : 'Некорректный пароль');
+    console.log(valueSignUp)
     return;
 }
-})
+)
 
-// 3.При нажатии на кнопку у нас открывается модальное окно путем добавления modal-showed к div с классом modal.
-// Не забываем добавить кнопку для закрытия модалки (крестик в углу).
+// Задание 3 - Открытие модалки и добавления крестика
 const authButton = document.querySelector('.authentication-button')
-const modalBox = document.querySelector('.modal-overlay');
+const modalBox = document.querySelector('.modal-overlay')
 const openModal = document.querySelector('.modal-content')
-const closeModalButton = document.querySelector('.close-modal-button')
+const closeModalButton = document.getElementById('close-modal')
+const authModal = new Modal('modal')
 
 authButton.addEventListener('click', () => {
-    modalBox.classList.toggle('modal-overlay--open')
-    openModal.classList.toggle('modal-content--open')
+   authModal.open();
 })
 
 closeModalButton.addEventListener('click', () => {
-    modalBox.classList.remove('modal-overlay--open')
-    openModal.classList.remove('modal-content--open')
-})
+     authModal.close()
+     })
 
-// 4.В открытой модалке у нас будет форма авторизации: логин, пароль, кнопка "Войти".
-// Используя объект с задания №6, проверяем, ввели ли мы правильные данные? 
-// Если да - то по нажатию на кнопку "Войти", модальное окно должно закрыться и пользователь должен получить сообщение об успешном входе,
-// если нет - модальное окно не закрывается, пользователь получает сообщение об ошибке, например: "Неверный логин или пароль".
-const modalForm = document.querySelector('.modal-form');
-const modalSigninButton = document.querySelector('.modal-signin-button');
-const modalRegisterLogin = document.querySelector('.modal-register.login').value;
-const modalRegisterPassword = document.querySelector('.modal-register.password').value;
-
-modalForm.addEventListener('submit', (event) => {
+// Задание 4 - Добавить в модалку логин и пароль и добавить
+const modalForm = new Form('modal-form-id');
+document
+.getElementById('modal-form-id')
+.addEventListener('submit', (event) => {
     event.preventDefault();
-    const modalRegisterLogin = document.querySelector('.modal-register.login');
-    const modalRegisterPassword = document.querySelector('.modal-register.password');
-    const form = event.target;
-    const formData = new FormData(form);
-    let data = Object.fromEntries(formData.entries());
-    if (formLogin.value === modalRegisterLogin.value && formPassword.value === modalRegisterPassword.value) {
+    const valueModal = modalForm.getFormData()
+
+    if (valueSignUp.login === valueModal.login && valueSignUp.password === valueModal.password) {
         modalBox.classList.remove('modal-overlay--open')
         openModal.classList.remove('modal-content--open')
         alert('Вы зарегистрировались')
-        data.lastLogin = new Date();
-        const currentUser = data;
+        valueModal.lastLogin = new Date();
+        const currentUser = valueModal;
         console.log(currentUser)
+        modalForm.resetForm();
     } else {
         alert('Некорректный логин или пароль')
     }
