@@ -1,5 +1,5 @@
-import Modal from './modal.js'
-import Form from './form.js'
+import { Modal } from './Modal.js'
+import { Form } from './Form.js'
 
 const signUpForm = new Form('signup-form-id');
 const emailForm = new Form('email-form-id');
