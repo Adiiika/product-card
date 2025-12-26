@@ -1,4 +1,5 @@
 export class Modal {
+
     constructor(modalId) {
         this.modalId = document.getElementById(modalId);
         this.modalOverlay = document.getElementById('overlay');
@@ -17,4 +18,5 @@ export class Modal {
     checkIsOpenModal() {
         return this.modalId.classList.contains('modal-content--open');
     }
+    
 }   
