@@ -1,5 +1,4 @@
 import {productCards} from './product-cards.js';
-
 // По аналогии из лекции — создать и реализовать шаблон для продуктовых карточек.
 const productCardsTemplate = document.getElementById('product-cards-template')
 const productCardsList = document.getElementById('product-cards-list')

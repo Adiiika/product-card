@@ -52,5 +52,3 @@ function checkSpeedCars(speed) {
 checkSpeedCars(300);
 checkSpeedCars(250);
 checkSpeedCars(100);
-
-export {};
