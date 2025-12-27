@@ -1,3 +1,4 @@
+
 //Задание 3. Функция, которая отображает имя города и его температуру
 function reportTemperatureCity(City, Temperature) {
     console.log(`Сейчас в ${City} температура ${Temperature} градусов по Цельсию`)

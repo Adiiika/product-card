@@ -32,7 +32,7 @@
  </template>
 </div>
 <div class="signup-form-container">
-<form class="signup-form">
+<form id="signup-form-id" class="signup-form">
     <label>
         Имя:
     <input class="register name" name="firstName" type="text" placeholder="Введите свое имя" required>
@@ -41,7 +41,7 @@
     День Рождения:
     <input class="register birthday" name="birthDate" type="date" placeholder="День рождение" required>
     Логин:
-    <input class="register login" name="userName" placeholder="Введите свой логин" required>
+    <input class="register login" name="login" placeholder="Введите свой логин" required>
     Пароль:
     <input class="register password" name="password" type="password" placeholder="Введите свой пароль" required>
     Подтверждение пароля:
@@ -51,45 +51,41 @@
 </label>
 </form>
 </div>
-
 <footer class="footer-product-cards">
-<div>
-    <b class="product-card-header">Product Cards</b>
-    <p class="product-description-cards">У нас самые лучшие продукты для кожи!</p>
-    <img class="telegram-icon" src="/images/telegram-icon.svg">
-    <img class="vk-icon" src="/images/vk-icon.svg">
-</div>
-
-<div>
-    <nav>
-        <a class="product-nav-links" href="/">Быстрые ссылки</a>
-        <a class="product-nav main" href="/">Главная</a>
-        <a class="product-nav shop" href="/shop">Магазин</a>
-        <a class="product-nav contacts" href="/contacts">Контакты</a>
-    </nav>
-</div>
-<div>
-    <b class="product-subscribe-promotions">Подпишись на наши акции:</b>
-<form class="product-email-form">
-    <input name="email" class="product-input" placeholder="Введи email..." required>
-    <div class="product-black-line"></div>
-    <button type="submit" class="product-subscribe-button">Подписаться</button>
-</form>
-</div>
-<small class="product-email-copyright">www.product-cards.com©all right reserve</small>
-<div class="product-white-line"></div>
+    <div>
+        <b class="product-card-header">Product Cards</b>
+        <p class="product-description-cards">У нас самые лучшие продукты для кожи!</p>
+        <img class="telegram-icon" src="src/images/telegram-icon.svg">
+        <img class="vcontact-icon" src="src/images/vk-icon.svg">
+    </div>
+    <div>
+        <nav>
+            <a class="product-nav-links" href="/">Быстрые ссылки</a>
+            <a class="product-nav main" href="/">Главная</a>
+            <a class="product-nav shop" href="/shop">Магазин</a>
+            <a class="product-nav contacts" href="/contacts">Контакты</a>
+        </nav>
+    </div>
+    <div>
+        <b class="product-subscribe-promotions">Подпишись на наши акции:</b>
+        <form id="email-form-id" class="product-email-form" novalidate>
+            <input name="email" type="email" class="product-input" placeholder="Введи email..." required>
+            <div class="product-black-line"></div>
+            <button type="submit" class="product-subscribe-button">Подписаться</button>
+        </form>
+    </div>
+    <small class="product-email-copyright">www.product-cards.com©all right reserve</small>
+    <div class="product-white-line"></div>
 </footer>
-
-<div class="modal-overlay"></div>
-<div class="modal-content">
-  <form class="modal-form">
-    <button class="close-modal-button">&#x2715</button>
-    <input class="modal-register login" type="text" name="modalLogin" placeholder="Введите свой логин">
-    <input class="modal-register password" type="password" name="modalPassword" placeholder="Введите свой пароль">
+<div id="overlay" class="modal-overlay"></div>
+<div id="modal" class="modal-content">
+  <form id="modal-form-id" class="modal-form">
+    <button type="button" id="close-modal" class="close-modal-button">&#x2715</button>
+    <input class="modal-register login" type="text" name="login" placeholder="Введите свой логин">
+    <input class="modal-register password" type="password" name="password" placeholder="Введите свой пароль">
     <button class="modal-signin-button" type="submit">Войти</button>
   </form>
 </div>
-<script type="module" src="homework-8.js"></script>
-<script type="module" src="homework-9.js"></script>
+<script type="module" src="main.js"></script>
 </body>
 </html>

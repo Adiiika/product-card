@@ -1,3 +1,5 @@
+// Задание 7.5. Уровень 2
+
 export const userComments = [
   {
     postId: 1,
