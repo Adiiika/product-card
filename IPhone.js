@@ -1,5 +1,6 @@
 import { AppleDevice } from "./Apple-device.js"
 class Iphone extends AppleDevice {
+
     constructor(model, functions, price, warranty) {
         super(model, price, warranty)
         this.functions = functions
@@ -8,6 +9,7 @@ class Iphone extends AppleDevice {
     showDeviceInfo() {
         console.log(`${this.model} имеет такие функции как ${this.functions} и будет стоить ${this.price} рублей и гарантия на него ${this.warranty}`)
     }
+    
 }
 
 const PresentIphone1 = new Iphone('Iphone 11', 'Face ID, True Tone, Широкоугольная камера', 25000, '12 месяцев');

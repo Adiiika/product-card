@@ -1,6 +1,7 @@
 import { AppleDevice } from "./Apple-device.js";
 
 class IMac extends AppleDevice {
+
     constructor(model, storage, price, warranty) {
         super(model, price, warranty);
         this.storage = storage;
@@ -9,6 +10,7 @@ class IMac extends AppleDevice {
     presentDevice() {
         console.log(`Этот ${this.model} с памятью ${this.storage} будет стоить ${this.price} и гарантия на него ${this.warranty}`)
     }
+    
 }
 
 const IMac1 = new IMac('Macbook air m2', '256 гб и 8 гб ОЗУ', 65000, '12 месяцев');
