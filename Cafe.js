@@ -1,10 +1,11 @@
-export class Cafe {
+import { Drink } from './Drink.js'
 
+export class Cafe {
     constructor(name, location) {
         this.name = name;
         this.location = location;
     }
-    
+
     getCafeInfo() {
         console.log(`Кафе называется ${this.name} и находиться в ${this.location},`);
     }
@@ -12,6 +13,4 @@ export class Cafe {
     orderDrink(drink) {
         drink.serveDrink();
     }
-
 }
-
