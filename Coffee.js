@@ -6,7 +6,6 @@ export class Coffee extends Drink {
         this.milkType = milkType;
         this.beanType = beanType;
     }
-
     getDrinkInfo() {
         return console.log(`${this.name} на ${this.milkType} и также на ${this.beanType} в ${this.size} размере за ${this.price} рублей`); 
     }

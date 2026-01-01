@@ -6,7 +6,6 @@ export class Milkshake extends Drink {
         this.iceCreamType = iceCreamType;
         this.addIns = addIns;
     }
-
     getDrinkInfo() {
         return console.log(`${this.name} на ${this.iceCreamType} с добавкой ${this.addIns} в ${this.size} размере за ${this.price} рублей`)
     }
