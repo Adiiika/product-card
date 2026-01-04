@@ -1,4 +1,5 @@
 export class Drink {
+
     #temperature
     constructor(name, size, price, temperature) {
         this.name = name;
@@ -8,7 +9,7 @@ export class Drink {
     }
 
     getDrinkInfo() {
-        return `${this.name} в ${this.size} размере стоит ${this.price} рублей`;
+        return `${ this.name } в ${ this.size } размере стоит ${ this.price } рублей`;
     }
 
     getDrinkTemperature() {
@@ -20,15 +21,14 @@ export class Drink {
     }
 
     #makeDrink() {
-        return `${this.name} готовиться...`;
+        return `${ this.name } готовиться...`;
     }
 
     serveDrink() {
         this.getDrinkInfo();
         this.#setDrinkTemperature(this.#temperature);
         this.#makeDrink();
-        return `${this.name} (${this.#temperature}°C) готово!`;
+        return `${ this.name } (${ this.#temperature }°C) готово!`;
     }
+
 }
-
-
