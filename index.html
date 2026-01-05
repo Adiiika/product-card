@@ -5,107 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Product-card</title>
 </head>
 <body>
 <div class="background-selection-container">
    <h1 class="main-title">Выбери свой продукт</h1>   
-   <img src="images\background-for-cards.png" alt="Фон для продуктов" class="background-for-cards">
+   <img src="src/images/bg-flowers.png" alt="Фон для продуктов" class="background-for-cards">
 </div>
-
 <div class="product-cards-container">
-  <ul class="card-container">
-    <img src="images\moist-mousse.png" alt="Увлажняющий мусс" width="290px" height="245px">
-    <span class="product-category">для нормальной кожи</span>
-    <h2 class="product-name">Увлажняющий мусс</h2>
-    <p class="product-description">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой</p>
-    <span>Состав:</span>
-    <ul class="product-compound">
-        <li class="product-list-item">активные натуральные комплексы</li>
-        <li class="product-list-item">витамины С, А, РР, В И Е </li>
-        <li class="product-list-item">солнцезащитные компоненты</li>
-    </ul>
-    <div class="product-price-container">
-        <b class="product-price-label">Цена</b>
-        <span class="product-price">2 750 &#8381</span>
-    </div>
-  </ul>
-      
-  <ul class="card-container">
-    <img src="images\moist-mask.png" alt="Увлажняющий мусс" width="290px" height="245px">
-    <span class="product-category">для нормальной кожи</span>
-    <h2 class="product-name">Увлажняющая маска</h2>
-    <p class="product-description">Способствует удерживанию влаги в верхних слоях кожи</p>
-    <span>Состав:</span>
-    <ul class="product-compound">
-        <li class="product-list-item">воски</li>
-        <li class="product-list-item">минералы</li>
-        <li class="product-list-item">масла</li>
-    </ul>
-    <div class="product-price-container">
-        <b class="product-price-label">Цена</b>
-        <span class="product-price">3 500 &#8381</span>
-    </div>
-  </ul>
-      
-  <ul class="card-container">
-    <img src="images\gel-for-face.png" alt="Увлажняющий мусс" width="290px" height="245px">
-    <span class="product-category">для нормальной кожи</span>
-    <h2 class="product-name">Гель для умывания</h2>
-    <p class="product-description">Интенсивно очищает, не повреждает защитный барьер кожи</p>
-    <span>Состав:</span>
-    <ul class="product-compound">
-        <li class="product-list-item">минералы</li>
-        <li class="product-list-item">витамины С, А, РР, В И Е </li>
-        <li class="product-list-item">солнцезащитные компоненты</li>
-    </ul>
-    <div class="product-price-container">
-        <b class="product-price-label">Цена</b>
-        <span class="product-price">1 650 &#8381</span>
-    </div>
-  </ul>
-      
-  <ul class="card-container">
-    <img src="images\skin-products-one.png" alt="Увлажняющий мусс" width="290px" height="245px">
-    <span class="product-category">для нормальной кожи</span>
-    <h2 class="product-name">Подарочный набор №1</h2>
-    <p class="product-description">Набор, состоящий из увлажняющего крема и маски</p>
-    <span>Состав:</span>
-    <ul class="product-compound">
-        <li class="product-list-item">воски</li>
-        <li class="product-list-item">минералы</li>
-        <li class="product-list-item">масла</li>
-    </ul>
-    <div class="product-price-container">
-        <b class="product-price-label">Цена</b>
-        <span class="product-price">4 750 &#8381</span>
-    </div>
-  </ul>
-      
-  <ul class="card-container">
-    <img src="images\skin-products-five.png" alt="Увлажняющий мусс" width="290px" height="245px">
-    <span class="product-category">для нормальной кожи</span>
-    <h2 class="product-name">Подарочный набор №5</h2>
-    <p class="product-description">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-    <span>Состав:</span>
-    <ul class="product-compound">
-        <li class="product-list-item">воски</li>
-        <li class="product-list-item">минералы</li>
-        <li class="product-list-item">масла</li>
-    </ul>
-    <div class="product-price-container">
-        <b class="product-price-label">Цена</b>
-        <span class="product-price">7 520 &#8381</span>
-    </div>
-  </ul>
+<ul id="product-cards-list"></ul>
+ <template id="product-cards-template">
+    <li class="card-container">
+        <img class="product-image" src="" alt="" width="290px" height="245px">
+        <span class="product-category"></span>
+        <h2 class="product-name"></h2>
+        <p class="product-description"></p>
+        <span class="product-compound">Состав:</span>
+        <ul class="product-list-compound"></ul>
+        <div class="product-price-container">
+            <b class="product-price-label">Цена</b>
+            <span class="product-price"></span>
+        </div>
+    </li>
+ </template>
 </div>
-
-<button class="button" id="change-color-first-card">Изменение цвета первой карточки</button>
-<button class="button" id="change-color-all-cards">Изменение цвета во всех карточках</button>
-<button class="button" id="open-website-products">Переход в основной сайт</button>
-<button class="button" id="change-color-button">Изменение цвета кнопки</button>
-<script src="main.js"></script>
+<div class="signup-form-container">
+<form id="signup-form-id" class="signup-form">
+    <label>
+        Имя:
+    <input class="register name" name="firstName" type="text" placeholder="Введите свое имя" required>
+     Фамилия:
+    <input class="register surname" name="lastName "type="text" placeholder="Введите свою фамилию" required>
+    День Рождения:
+    <input class="register birthday" name="birthDate" type="date" placeholder="День рождение" required>
+    Логин:
+    <input class="register login" name="login" placeholder="Введите свой логин" required>
+    Пароль:
+    <input class="register password" name="password" type="password" placeholder="Введите свой пароль" required>
+    Подтверждение пароля:
+    <input class="register password-confirmation" name="confirmPassword" type="password" placeholder="Подтвердите пароль" required>
+    <button class="register-button">Зарегистрироваться</button>
+     <button type="button" class="authentication-button">Аутентификация</button>
+</label>
+</form>
+</div>
+<footer class="footer-product-cards">
+    <div>
+        <b class="product-card-header">Product Cards</b>
+        <p class="product-description-cards">У нас самые лучшие продукты для кожи!</p>
+        <img class="telegram-icon" src="src/images/telegram-icon.svg">
+        <img class="vcontact-icon" src="src/images/vk-icon.svg">
+    </div>
+    <div>
+        <nav>
+            <a class="product-nav-links" href="/">Быстрые ссылки</a>
+            <a class="product-nav main" href="/">Главная</a>
+            <a class="product-nav shop" href="/shop">Магазин</a>
+            <a class="product-nav contacts" href="/contacts">Контакты</a>
+        </nav>
+    </div>
+    <div>
+        <b class="product-subscribe-promotions">Подпишись на наши акции:</b>
+        <form id="email-form-id" class="product-email-form" novalidate>
+            <input name="email" type="email" class="product-input" placeholder="Введи email..." required>
+            <div class="product-black-line"></div>
+            <button type="submit" class="product-subscribe-button">Подписаться</button>
+        </form>
+    </div>
+    <small class="product-email-copyright">www.product-cards.com©all right reserve</small>
+    <div class="product-white-line"></div>
+</footer>
+<div id="overlay" class="modal-overlay"></div>
+<div id="modal" class="modal-content">
+  <form id="modal-form-id" class="modal-form">
+    <button type="button" id="close-modal" class="close-modal-button">&#x2715</button>
+    <input class="modal-register login" type="text" name="login" placeholder="Введите свой логин">
+    <input class="modal-register password" type="password" name="password" placeholder="Введите свой пароль">
+    <button class="modal-signin-button" type="submit">Войти</button>
+  </form>
+</div>
+<script type="module" src="main.js"></script>
 </body>
 </html>
