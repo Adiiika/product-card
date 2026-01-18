@@ -1,0 +1,30 @@
+{
+    "users": [
+    {
+        "img": "user",
+        "name": "Иван",
+        "surname": "Иванов",
+        "id": "1",
+        "email": "ivanovich123@gmail.com",
+        "age": "34"
+    },
+
+    {
+        "img": "user",
+        "name": "Айдын",
+        "surname": "Кобарчук",
+        "id": "2",
+        "email": "Aidyncs90@gmail.com",
+        "age": "25"
+    },
+
+    {
+        "img": "user",
+        "name": "Алексей",
+        "surname": "Закилов",
+        "id": "3",
+        "email": "alexzak45@gmail.com",
+        "age": "29"
+    }
+    ]
+}
