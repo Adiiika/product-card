@@ -4,9 +4,6 @@ const allUsersDeleteButton = document.querySelector('.btn-delete-all-users');
 const allUsersDisplayButton = document.querySelector('.btn-display-all-users');
 const usersContainer = document.querySelector('.users-div-container');
 const userLoad = document.querySelector('.users-loading');
-if (userLoad) {
-    userLoad.style.display = 'none';
-}
 
 async function fetchUsers() {
     try {
@@ -67,16 +64,15 @@ allUsersDisplayButton.addEventListener('click', () => {
     const totalUsersCount = userData.users.length;
 
     if (currentCardsCount === totalUsersCount) {
-        console.log('Пользователи уже имеются')
+        console.log('Пользователи уже имеются');
         return;
     }
-
     userLoad.style.display = 'block';
+
     setTimeout(() => {
         userLoad.style.display = 'none';
         usersList.innerHTML = '';
         renderUsers(userData);
         localStorage.setItem('users', JSON.stringify(userData));
     }, 2000)
-
 })
