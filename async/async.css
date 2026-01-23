@@ -1,5 +1,5 @@
 .users-loading {
-    display: none;
+    display: block;
     justify-content: center;
     margin: 500px 0 0 700px;
     font-size: 50px;

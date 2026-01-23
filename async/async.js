@@ -5,9 +5,25 @@ const allUsersDisplayButton = document.querySelector('.btn-display-all-users');
 const usersContainer = document.querySelector('.users-div-container');
 const userLoad = document.querySelector('.users-loading');
 
+function showLoad() {
+    userLoad.style.display = 'block';
+}
+showLoad();
+
 async function fetchUsers() {
     try {
-        const responce = await fetch('/async/users.JSON');
+        const responce = await new Promise((resolve, reject) => {
+            setTimeout(async () => {
+                try {
+                    userLoad.style.display = 'none';
+                    const result = await fetch('/async/users.JSON');
+                    resolve(result);
+
+                } catch (error) {
+                    reject(error);
+                }
+            }, 2000);
+        })
 
         if (!responce.ok) {
             throw new Error(`Ошибка: ${responce.status}`);
@@ -22,7 +38,7 @@ async function fetchUsers() {
 }
 
 function setLocalStorage() {
-    localStorage.setItem('users', JSON.stringify(userInfo));
+    localStorage.setItem('users', JSON.stringify(userData))
 }
 
 const userData = await fetchUsers();
@@ -67,12 +83,12 @@ allUsersDisplayButton.addEventListener('click', () => {
         console.log('Пользователи уже имеются');
         return;
     }
-    userLoad.style.display = 'block';
+    showLoad()
 
     setTimeout(() => {
         userLoad.style.display = 'none';
         usersList.innerHTML = '';
         renderUsers(userData);
-        localStorage.setItem('users', JSON.stringify(userData));
+        setLocalStorage()
     }, 2000)
 })
