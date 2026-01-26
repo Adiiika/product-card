@@ -1,50 +1,42 @@
+import { removeFromStorage, overwriteStorageData, setToStorage, getFromStorage, updateStorageDataByFilter } from "/async/localStorage.js"
+
 const userDataTemplate = document.querySelector('.user-data-template');
 const usersList = document.querySelector('.users-list');
-const allUsersDeleteButton = document.querySelector('.btn-delete-all-users');
-const allUsersDisplayButton = document.querySelector('.btn-display-all-users');
+const allUsersDeleteBtn = document.querySelector('.btn-delete-all-users');
+const allUsersDisplayBtn = document.querySelector('.btn-display-all-users');
 const usersContainer = document.querySelector('.users-div-container');
 const userLoad = document.querySelector('.users-loading');
 
 function showLoad() {
     userLoad.style.display = 'block';
 }
-showLoad();
+
+function hideLoad() {
+    userLoad.style.display = 'none';
+}
 
 async function fetchUsers() {
-    try {
-        const responce = await new Promise((resolve, reject) => {
-            setTimeout(async () => {
-                try {
-                    userLoad.style.display = 'none';
-                    const result = await fetch('/async/users.JSON');
-                    resolve(result);
+    showLoad();
+    setTimeout(async () => {
+        try {
+            hideLoad();
 
-                } catch (error) {
-                    reject(error);
-                }
-            }, 2000);
-        })
+            const result = await fetch('/async/users.JSON');
 
-        if (!responce.ok) {
-            throw new Error(`Ошибка: ${responce.status}`);
+            if (!result.ok) throw new Error(`Ошибка: ${result.status}`);
+
+            let userInfo = await result.json();
+
+            userData = userInfo;
+            renderUsers(userData);
+            setToStorage('users', userData);
         }
-        const userInfo = await responce.json();
-
-        return userInfo;
-    }
-    catch (error) {
-        console.error(error.message);
-    }
+        catch (error) {
+            console.error(error.message);
+        }
+    }, 2000);
 }
-
-function setLocalStorage() {
-    localStorage.setItem('users', JSON.stringify(userData))
-}
-
-const userData = await fetchUsers();
-if (userData) {
-    renderUsers(userData);
-}
+let userData = await fetchUsers();
 
 function renderUsers(userData) {
     userData.users.forEach(user => {
@@ -56,26 +48,28 @@ function renderUsers(userData) {
         usersClone.querySelector('.user-email').textContent = `Email: ${user.email}`;
         usersClone.querySelector('.user-age').textContent = `Возраст: ${user.age}`;
 
-        const userDeleteButton = usersClone.querySelector('.btn-delete-user');
-        userDeleteButton.dataset.id = user.id;
+        const userDeleteBtn = usersClone.querySelector('.btn-delete-user');
+        userDeleteBtn.dataset.id = user.id;
 
-        userDeleteButton.addEventListener('click', (event) => {
+        userDeleteBtn.addEventListener('click', (event) => {
             const userId = event.target.dataset.id;
             const deleteUser = event.target.closest('.users-div-container');
+
             deleteUser.remove();
+            updateStorageDataByFilter('users', userId);
         })
         usersList.appendChild(usersClone);
     });
 }
 
 // Кнопка для удаления всех карточек
-allUsersDeleteButton.addEventListener('click', () => {
+allUsersDeleteBtn.addEventListener('click', () => {
     usersList.innerHTML = '';
-    localStorage.removeItem('users');
+    removeFromStorage('users');
 })
 
 // Кнопка для отображения всех карточек
-allUsersDisplayButton.addEventListener('click', () => {
+allUsersDisplayBtn.addEventListener('click', () => {
     const currentCardsCount = usersList.children.length;
     const totalUsersCount = userData.users.length;
 
@@ -83,12 +77,12 @@ allUsersDisplayButton.addEventListener('click', () => {
         console.log('Пользователи уже имеются');
         return;
     }
-    showLoad()
+    showLoad();
 
     setTimeout(() => {
-        userLoad.style.display = 'none';
+        hideLoad();
         usersList.innerHTML = '';
         renderUsers(userData);
-        setLocalStorage()
+        setToStorage('users', userData);
     }, 2000)
 })
