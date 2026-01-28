@@ -48,10 +48,10 @@ function renderUsers(userData) {
         usersClone.querySelector('.user-email').textContent = `Email: ${user.email}`;
         usersClone.querySelector('.user-age').textContent = `Возраст: ${user.age}`;
 
-        const userCardDeleteBtn = usersClone.querySelector('.btn-delete-user');
-        userCardDeleteBtn.dataset.id = user.id;
+        const userCardHandleBtn = usersClone.querySelector('.btn-delete-user');
+        userCardHandleBtn.dataset.id = user.id;
 
-        userCardDeleteBtn.addEventListener('click', (event) => {
+        userCardHandleBtn.addEventListener('click', (event) => {
             const userId = event.target.dataset.id;
             const deleteUser = event.target.closest('.users-div-container');
 
